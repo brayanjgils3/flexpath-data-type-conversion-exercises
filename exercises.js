@@ -2,7 +2,7 @@ import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   //Currently running:
-  exercise_01();
+  exercise_06();
 }
 
 function exercise_01() {
@@ -57,7 +57,10 @@ function exercise_02() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num = 1;
+  let strNum = String(num);
+  console.log(strNum);
+  console.log(typeof(strNum));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -79,7 +82,10 @@ function exercise_03() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let bool1 = Boolean(0);
+  let bool2 = Boolean(1);
+  console.log(bool1);
+  console.log(bool2);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -98,7 +104,8 @@ function exercise_04() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let nan = Number("gmt");
+  console.log(isNaN(nan));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -119,7 +126,8 @@ function exercise_05() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let age = 23;
+  console.log(`I am ${age} years old`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
