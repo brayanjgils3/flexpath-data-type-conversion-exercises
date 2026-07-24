@@ -2,7 +2,7 @@ import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   //Currently running:
-  exercise_12();
+  exercise_16();
 }
 
 function exercise_01() {
@@ -302,7 +302,12 @@ function exercise_12() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let salary = 80000;
+  const formatter = new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"});
+  let finalNumber = formatter.format(salary);
+  console.log(finalNumber);
+
+  console.log(Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(salary));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -327,7 +332,10 @@ function exercise_13() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let salary = 100000;
+  const formatter = new Intl.NumberFormat("ja-JP", {style: "currency", currency: "JPY"});
+  console.log(formatter.format(salary));
+
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -347,7 +355,9 @@ function exercise_14() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let date = new Date("2023-05-27T05:27:00");
+  console.log(date.toDateString());
+  console.log(date.toTimeString());
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -369,7 +379,9 @@ function exercise_15() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let date = new Date(); //Current time
+  console.log(date.toLocaleDateString("en-US"));
+  console.log(date.toLocaleDateString("en-GB"));
 
   // CODE IN THE OPEN LINES ABOVE
 }
