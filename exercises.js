@@ -1,24 +1,8 @@
 import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  /*
-
-    To run the code you write for each exercise, change the `exercise_01()` code below to match the EXACT name
-     of the exercise, as it is written in the line `function exercise_xx`.
-    
-     For Example:
-
-     If I want to run exercise_05 below, I would change the code below from "exercise_01()" to
-     "exercise_05()", save this file. 
-		 
-		 Then, when I run this file by running `node exercise.js`
-     in the VS Code terminal while inside this folder, your code for exercise_05 will run.
-
-  */
-
-  // Modify the line of code BELOW to run a different exercise
+  //Currently running:
   exercise_01();
-  // Modify the line of code ABOVE to run a different exercise
 }
 
 function exercise_01() {
@@ -40,7 +24,20 @@ function exercise_01() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let str = "hi";
+  let num = 1;
+  let bool = true;
+  let obj = {
+    value: "hello",
+    value2: "world"
+  }
+  let empty;
+
+  console.log(typeof(str));
+  console.log(typeof(num));
+  console.log(typeof(bool));
+  console.log(typeof(obj));
+  console.log(typeof(empty));
 
   // CODE IN THE OPEN LINES ABOVE
 }
