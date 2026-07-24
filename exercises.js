@@ -2,7 +2,7 @@ import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   //Currently running:
-  exercise_06();
+  exercise_12();
 }
 
 function exercise_01() {
@@ -153,7 +153,8 @@ function exercise_06() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  console.log(name + " has " + number + " apples");
+  console.log(`${name} has ${number} apples`);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -171,7 +172,12 @@ function exercise_07() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let obj = {
+    value: "hi"
+  };
+  
+  console.log(obj);
+  console.log(JSON.stringify(obj));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -194,7 +200,9 @@ function exercise_08() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  console.log(jsonStringToParse);
+  const json = JSON.parse(jsonStringToParse);
+  console.log(json.age);
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -214,7 +222,10 @@ function exercise_09() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num = 6.02102;
+  console.log(Math.ceil(num));
+  console.log(Math.round(num));
+  console.log(Math.floor(num));
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -234,7 +245,9 @@ function exercise_10() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num = 6.02102;
+  console.log(num.toFixed(2));
+  
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -256,7 +269,15 @@ function exercise_11() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num = 1297481289.05;
+  let format = Intl.NumberFormat("en-US").format(num);
+  console.log(format);
+
+  //Course solution:
+  let numberToFormat = 9238923.04;
+  const usFormatter = new Intl.NumberFormat("en-US");
+  let formattedNumberUS = usFormatter.format(numberToFormat);
+  console.log(formattedNumberUS);
 
   // CODE IN THE OPEN LINES ABOVE
 }
