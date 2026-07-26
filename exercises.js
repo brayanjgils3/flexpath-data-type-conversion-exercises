@@ -4,7 +4,7 @@ import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   //Currently running:
-  exercise_18();
+  exercise_19();
 }
 
 function exercise_01() {
@@ -491,7 +491,21 @@ function exercise_19() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let date = new Date();
+  let futureDate = new Date("2027-07-29")
+  let difference = date - futureDate;
+  console.log(Math.floor(difference/ 1000 / 60 / 60 / 24));
 
+  /* Professor solution:
+  et currentDate = new Date();
+  let futureDate = new Date(2025, 0, 25); // January 25, 2025
+  let timeDifference = futureDate - currentDate;
+  let daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+  console.log(daysDifference); // Number of days until January 25, 2025
+
+  And you still made it work, youre the best.
+
+  */ 
+  
   // CODE IN THE OPEN LINES ABOVE
 }
