@@ -1,8 +1,10 @@
+import { parse } from "path";
+import { json } from "stream/consumers";
 import { fileURLToPath } from "url";
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   //Currently running:
-  exercise_16();
+  exercise_18();
 }
 
 function exercise_01() {
@@ -399,7 +401,11 @@ function exercise_16() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  try {
+    let invalidJson = JSON.parse("Not Json");
+  } catch (error) {
+    console.log(error.message);
+  }
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -416,7 +422,15 @@ function exercise_17() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let bool = String(true);
+  console.log(typeof(bool));
+  console.log(bool);
+
+  /* Professor solution:
+  let boolValue = true;
+  let boolAsString = String(boolValue);
+  console.log(boolAsString); // "true"
+  */
 
   // CODE IN THE OPEN LINES ABOVE
 }
@@ -452,7 +466,10 @@ function exercise_18() {
 
   // CODE IN THE OPEN LINES BELOW
 
-  const placeholder = "Delete this line and code in this space";
+  let num = 100000000.99
+  console.log(new Intl.NumberFormat("en-US", {style: "currency", currency: "USD"}).format(num));
+  console.log(new Intl.NumberFormat("ru-RU", {style: "currency", currency: "RUB"}).format(num));
+  console.log(new Intl.NumberFormat("ja-JP", {style: "currency", currency: "JPY"}).format(num));
 
   // CODE IN THE OPEN LINES ABOVE
 }
